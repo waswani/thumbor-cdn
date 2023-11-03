@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thumbor-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thumbor
+  template:
+    metadata:
+      labels:
+        app: thumbor
+    spec:
+      containers:
+        - name: thumbor
+          image: minimalcompact/thumbor:6.7.5
+          command: ["thumbor"]
+          args: ["-p", "80", "-c", "/conf/thumbor.conf"]
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: thumbor-conf
+              mountPath: /conf
+      volumes:
+        - name: thumbor-conf
+          configMap:
+            name: thumbor
