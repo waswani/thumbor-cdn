@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: thumbor
+data:
+  thumbor.conf: |
+    UPLOAD_ENABLED = False
