@@ -13,3 +13,6 @@ data:
     STORAGE = 'tc_aws.storages.s3_storage'
     UPLOAD_PHOTO_STORAGE = 'tc_aws.storages.s3_storage'
     RESULT_STORAGE = 'tc_aws.result_storages.s3_storage'
+    TC_AWS_LOADER_BUCKET=''
+    TC_AWS_ENABLE_HTTP_LOADER=False
+    TC_AWS_ALLOWED_BUCKETS=False # List of allowed bucket to be requested
