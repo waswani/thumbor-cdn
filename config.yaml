@@ -7,7 +7,6 @@ data:
     UPLOAD_ENABLED = False
     TC_AWS_REGION = 'us-west-2'
     TC_AWS_STORAGE_BUCKET = 'thumbor-waswani'
-    TC_AWS_STORAGE_ROOT_PATH = 'storage'
     TC_AWS_RESULT_STORAGE_BUCKET = 'thumbor-waswani'
     TC_AWS_RESULT_STORAGE_ROOT_PATH = 'result_storage'
     STORAGE = 'tc_aws.storages.s3_storage'
