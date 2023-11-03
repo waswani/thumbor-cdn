@@ -19,6 +19,9 @@ spec:
           args: ["-p", "80", "-c", "/conf/thumbor.conf"]
           ports:
             - containerPort: 80
+          envFrom:
+            - secretRef:
+                name: s3-credentials
           volumeMounts:
             - name: thumbor-conf
               mountPath: /conf
